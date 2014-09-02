@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html id="dummy">
+<head>
+    <title>תב"ע פתוחה</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="description" content="אתור תוכניות בניה עירונית (תבע) ב">
+	<link rel="canonical" href="http://?.opentaba.info/" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+    <script>
+        // load an alternative index.html from the core repo
+        $.ajax({
+            url: 'https://api.github.com/repos/niryariv/opentaba-client/contents/index.html',
+            headers: { Accept: 'application/vnd.github.raw' },
+            dataType: 'html',
+        }).done(function(res) {
+            // replace the current document with the downloaded one
+            var newDoc = document.open("text/html", "replace");
+            newDoc.write(res);
+            newDoc.close();
+        });
+    </script>
+</head>
+<body></body>
+</html>
